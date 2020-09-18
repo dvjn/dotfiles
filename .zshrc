@@ -1,32 +1,16 @@
-# Add common executable paths to PATH
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
+# Set up pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# Set up nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Set up Oh My Zsh!
 export ZSH="/home/divykj/.oh-my-zsh"
-ZSH_THEME="refined"
-
+export ZSH_THEME="refined"
 plugins=(safe-paste themes zsh-autosuggestions history-substring-search zsh-syntax-highlighting zsh-z k)
-
 source $ZSH/oh-my-zsh.sh
-
-# Set up Android Studio path
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# Set up pyenv path
-export PYENV_ROOT="$HOME/.local/share/pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
-# Set up golang path
-export PATH=$PATH:$HOME/.local/share/go/bin
-
-# Set up nvm
-export NVM_DIR="$HOME/.local/share/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Set up auto change node version using .nvmrc
 autoload -U add-zsh-hook
@@ -74,3 +58,4 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Show system info on start
 neofetch
+
