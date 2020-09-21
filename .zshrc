@@ -1,3 +1,6 @@
+# Set up variables
+export EDITOR="nvim"
+
 # Set up pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
@@ -53,9 +56,32 @@ rn-prepare-devices() {
     done
 }
 
+# Set up thefuck
+fuck () {
+    TF_PYTHONIOENCODING=$PYTHONIOENCODING;
+    export TF_SHELL=zsh;
+    export TF_ALIAS=fuck;
+    TF_SHELL_ALIASES=$(alias);
+    export TF_SHELL_ALIASES;
+    TF_HISTORY="$(fc -ln -10)";
+    export TF_HISTORY;
+    export PYTHONIOENCODING=utf-8;
+    TF_CMD=$(
+        thefuck THEFUCK_ARGUMENT_PLACEHOLDER $@
+    ) && eval $TF_CMD;
+    unset TF_HISTORY;
+    export PYTHONIOENCODING=$TF_PYTHONIOENCODING;
+    test -n "$TF_CMD" && print -s $TF_CMD
+}
+
 # Set alias for dotfiles management
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+# Function to edit and reload `.zshrc`
+erc() {
+  $EDITOR ~/.zshrc
+  source ~/.zshrc
+}
+
 # Show system info on start
 neofetch
-
