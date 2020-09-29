@@ -1,5 +1,5 @@
 [core]
-	excludesfile = $HOME/.config/git/ignore
+	excludesfile = ~/.config/git/ignore
 [user]
 	email = dkj@somaiya.edu
 	name = Divy Jain
