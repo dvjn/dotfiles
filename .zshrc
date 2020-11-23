@@ -13,7 +13,7 @@ eval "$(pyenv virtualenv-init -)"
 eval "$(thefuck --alias)"
 
 # Set up Oh My Zsh!
-export ZSH="/home/divykj/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="refined"
 plugins=(safe-paste themes zsh-autosuggestions history-substring-search zsh-syntax-highlighting zsh-z k)
 source $ZSH/oh-my-zsh.sh
@@ -67,6 +67,9 @@ erc() {
   $EDITOR ~/.zshrc
   source ~/.zshrc
 }
+
+alias ls="exa"
+alias cat="bat"
 
 # Show system info on start
 neofetch

@@ -1,6 +1,9 @@
 # Add common executable paths to PATH
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
+# Add Java Home
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+
 # Add Android Studio path
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
