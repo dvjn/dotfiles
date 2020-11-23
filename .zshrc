@@ -70,6 +70,7 @@ erc() {
 
 alias ls="exa"
 alias cat="bat"
+alias df="dotfiles"
 
 # Show system info on start
 neofetch
