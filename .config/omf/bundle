@@ -1,0 +1,9 @@
+package foreign-env
+package license
+package nvm
+package pyenv
+package thefuck
+package z
+theme default
+theme https://github.com/divykj/omf-theme-dv
+theme https://github.com/divykj/omf-theme-dv-starship

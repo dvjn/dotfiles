@@ -2,6 +2,7 @@
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "workbench.iconTheme": "material-icon-theme",
+  "editor.tabSize": 4,
   "editor.formatOnSave": true,
   "editor.renderWhitespace": "all",
   "python.linting.pylintEnabled": false,
@@ -47,4 +48,5 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }

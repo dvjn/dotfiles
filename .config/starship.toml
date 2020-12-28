@@ -1,0 +1,124 @@
+format = """$cmd_duration $status\
+$line_break\
+$username\
+$hostname\
+$kubernetes\
+$directory$package\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$hg_branch\
+$docker_context\
+$golang\
+$java\
+$nodejs\
+$python\
+$rust\
+$conda\
+$line_break\
+$jobs\
+$character"""
+
+add_newline = false
+
+[username]
+style_user = "purple bold"
+style_root = "bright-purple bold"
+format = "[$user]($style) "
+
+[hostname]
+style = "green bold"
+format = "[$hostname]($style) "
+
+[character]
+success_symbol = "[»](blue)[»](bold blue)"
+error_symbol = "[»](blue)[»](bold blue)"
+
+[cmd_duration]
+min_time = 100
+show_milliseconds = true
+format = "[duration/](bright-black)[$duration]($style)"
+style = "bold yellow"
+show_notifications = true
+min_time_to_notify = 60_000
+
+[status]
+format = "[return/](bright-black)[$status]($style)"
+style = "bold red"
+disabled = false
+
+[directory]
+format = "[$path]($style)"
+style="blue bold"
+truncation_length = 1
+fish_style_pwd_dir_length = 1
+
+[package]
+format = " [ver/](bright-black)[$version]($style)"
+style = "purple bold"
+
+[git_branch]
+format = " [git/](bright-black)[$branch]($style)"
+style = "yellow bold"
+
+[git_commit]
+disabled = true
+
+[git_state]
+rebase = "RB"
+merge = "MR"
+revert = "RV"
+cherry_pick = "CP"
+bisect = "BS"
+am = "AM"
+am_or_rebase = "AMRB"
+format = '\([$state($progress_current/$progress_total)]($style)\)'
+style = 'red bold'
+
+[git_status]
+conflicted = "="
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+untracked = "?"
+stashed = "$"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "×"
+format = '([\[$all_status$ahead_behind\]]($style))'
+
+[hg_branch]
+format = "[hg/](bright-black)[$branch]($style)"
+style = "yellow bold"
+
+[docker_context]
+style = "blue bold"
+format = " [docker/](bright-black)[$context]($style)"
+disabled = false
+
+[golang]
+style = "cyan bold"
+format = " [go/](bright-black)[$version]($style)"
+
+[java]
+style = "yellow bold"
+format = " [java/](bright-black)[$version]($style)"
+
+[nodejs]
+style = "green bold"
+format = " [node/](bright-black)[$version]($style)"
+
+[python]
+style = "purple bold"
+format = ' [py/](bright-black)[$version(\[$virtualenv\])]($style)'
+
+[rust]
+style = "red bold"
+format = ' [rust/](bright-black)[$version]($style)'
+
+[conda]
+style = "green bold"
+format = ' [conda/](bright-black)[$environment]($style)'
+
