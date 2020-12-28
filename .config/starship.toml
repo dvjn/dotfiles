@@ -1,24 +1,10 @@
-format = """$cmd_duration $status\
+format = """$cmd_duration$status\
 $line_break\
-$username\
-$hostname\
-$kubernetes\
-$directory$package\
-$git_branch\
-$git_commit\
-$git_state\
-$git_status\
-$hg_branch\
-$docker_context\
-$golang\
-$java\
-$nodejs\
-$python\
-$rust\
-$conda\
+$username$hostname$directory$package\
+$git_branch$git_commit$git_state$git_status$hg_branch\
+$docker_context$golang$java$nodejs$python$rust$conda\
 $line_break\
-$jobs\
-$character"""
+$jobs$character"""
 
 add_newline = false
 
@@ -38,13 +24,13 @@ error_symbol = "[»](blue)[»](bold blue)"
 [cmd_duration]
 min_time = 100
 show_milliseconds = true
-format = "[duration/](bright-black)[$duration]($style)"
+format = "([duration/](bright-black)[$duration]($style) )"
 style = "bold yellow"
 show_notifications = true
 min_time_to_notify = 60_000
 
 [status]
-format = "[return/](bright-black)[$status]($style)"
+format = "[status/](bright-black)[$status]($style)"
 style = "bold red"
 disabled = false
 
