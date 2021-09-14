@@ -6,3 +6,4 @@ source $fish_config_dir/env.fish
 
 status is-interactive
 and source $fish_config_dir/alias.fish
+

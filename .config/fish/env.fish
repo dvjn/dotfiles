@@ -21,6 +21,11 @@ set -x NVM_DIR $HOME/.nvm
 # Add cargo path
 set -x PATH $HOME/.cargo/bin $PATH
 
+# Add yarn bins
+set -x PATH (yarn global bin -s --offline) $PATH
+
+set -x CHROME_EXECUTABLE /usr/bin/google-chrome-stable
+
 # Add Hadoop 2 path
 # set -x HADOOP_INSTALL /usr/share/hadoop-2.10.1
 # set -x HADOOP_MAPRED_HOME $HADOOP_INSTALL

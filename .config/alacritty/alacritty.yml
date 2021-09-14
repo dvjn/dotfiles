@@ -44,12 +44,14 @@ colors:
     cyan: "#56b6c2"
     white: "#828791"
 
-background_opacity: 0.95
+background_opacity: 0.98
 
 window:
   padding:
     x: 8
     y: 8
+
+  decorations: none
 
 scrolling:
   history: 10000

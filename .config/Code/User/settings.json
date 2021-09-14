@@ -1,14 +1,20 @@
 {
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "GitHub Dark",
   "editor.tabSize": 4,
-  "editor.formatOnSave": true,
   "editor.renderWhitespace": "all",
+  "editor.formatOnSave": true,
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
   "python.linting.enabled": true,
   "python.formatting.provider": "black",
+  "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontWeight": "500",
+  "editor.inlineHints.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.codeLensFontFamily": "'Fira Code'",
+  "debug.console.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true,
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
@@ -21,21 +27,27 @@
   "[javascriptreact]": {
     "editor.tabSize": 2
   },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
     "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[css]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "python.languageServer": "Pylance",
-  "window.zoomLevel": 0,
-  "workbench.colorTheme": "GitHub Dark",
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
@@ -48,5 +60,60 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "javascript.updateImportsOnFileMove.enabled": "always"
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "markdownlint.config": {
+    "MD033": false
+  },
+  "jupyter.askForKernelRestart": false,
+  "[java]": {
+    "editor.defaultFormatter": "mwpb.java-prettier-formatter"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "matklad.rust-analyzer"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "license.author": "Divya Jain <divykjain@gmail.com>",
+  "cSpell.userWords": [
+    "Divy",
+    "Divya",
+    "GCLOUD",
+    "firestore",
+    "localstorage",
+    "numpy"
+  ],
+  "[php]": {
+    "editor.defaultFormatter": "kokororin.vscode-phpfmt"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "liveServer.settings.donotVerifyTags": true,
+  "redhat.telemetry.enabled": false,
+  "liquid.format": false,
+  "workbench.iconTheme": "vscode-icons",
+  "Notes.notesLocation": "/home/divy/.vscnotes",
+  "workbench.productIconTheme": "fluent-icons",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "workbench.startupEditor": "none",
+  "rust-client.autoStartRls": false,
+  "rust-client.engine": "rust-analyzer",
+  "rust.racer_completion": false,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.autocomplete.enable": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": false
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveServer.settings.donotShowInfoMsg": true
 }
